@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>claimproof - ClaimProof</title>
+  <style>
+    :root { --bg:#f5f7f4; --panel:#fffef9; --ink:#151916; --muted:#5d665f; --line:#d6ddd3; --ok:#17633a; --warn:#8a5b00; --bad:#a12d22; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width:min(1100px, calc(100vw - 32px)); margin:28px auto 52px; display:grid; gap:16px; }
+    section, .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:18px; }
+    h1, h2, p { margin:0; } h1 { font-size:2.4rem; line-height:1; }
+    .hero { display:grid; gap:12px; }
+    .pill { width:fit-content; border-radius:999px; background:#e8eee4; padding:8px 12px; font-weight:800; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:10px; }
+    .metric strong { display:block; font-size:1.8rem; }
+    .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; flex-wrap:wrap; }
+    .supported strong { color:var(--ok); } .weak strong { color:var(--warn); } .unsupported strong { color:var(--bad); }
+    code { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    ul { margin:10px 0 0; padding-left:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="pill">publish_ready</span>
+      <h1>claimproof</h1>
+      <p>Claim evidence audit generated 2026-05-10T14:29:25.920Z.</p>
+    </section>
+    <section class="grid">
+      <div class="metric"><span>Score</span><strong>100</strong></div>
+      <div class="metric"><span>Supported</span><strong>9</strong></div>
+      <div class="metric"><span>Weak</span><strong>0</strong></div>
+      <div class="metric"><span>Unsupported</span><strong>0</strong></div>
+    </section>
+    <section><h2>Claims</h2><article class="card supported">
+  <div class="row"><strong>supported</strong><span>Local-first or local-only operation</span></div>
+  <p>no obvious secret, telemetry, or external API dependency found</p>
+  <ul><li><code>repo text scan</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>No backend or server dependency</span></div>
+  <p>no common backend dependency or server/API directory found</p>
+  <ul><li><code>package.json</code></li><li><code>repo tree</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>No telemetry or tracking</span></div>
+  <p>no common telemetry keywords found</p>
+  <ul><li><code>repo text scan</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>No API key or paid API dependency</span></div>
+  <p>no API-key-like references found</p>
+  <ul><li><code>repo text scan</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>CLI or command-line workflow</span></div>
+  <p>package bin or CLI file exists</p>
+  <ul><li><code>package.json#bin</code></li><li><code>src/cli.js</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>Tests or verification commands</span></div>
+  <p>test or verification scripts/files exist</p>
+  <ul><li><code>script:test</code></li><li><code>script:verify</code></li><li><code>test/engine.test.js</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>Continuous integration</span></div>
+  <p>GitHub Actions workflow exists</p>
+  <ul><li><code>.github/workflows/ci.yml</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>Reports, packets, bundles, or export artifacts</span></div>
+  <p>report/export evidence exists</p>
+  <ul><li><code>script:demo</code></li><li><code>script:verify</code></li></ul>
+</article>
+<article class="card supported">
+  <div class="row"><strong>supported</strong><span>License claim</span></div>
+  <p>license file exists</p>
+  <ul><li><code>LICENSE</code></li></ul>
+</article></section>
+  </main>
+</body>
+</html>

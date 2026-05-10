@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-05-10T14:29:25.920Z",
+  "repo": {
+    "name": "claimproof",
+    "path": "/Users/nicdunz/Documents/Codex/2026-05-10/dig-through-my-github-and-tell/products/claimproof",
+    "readme": "README.md"
+  },
+  "summary": {
+    "supported": 9,
+    "weak": 0,
+    "unsupported": 0,
+    "total": 9,
+    "score": 100,
+    "readiness": "publish_ready"
+  },
+  "claims": [
+    {
+      "id": "local-first",
+      "label": "Local-first or local-only operation",
+      "sources": [
+        "\"local-only\", \"no backend\", \"CLI\", \"tests\", \"sample report\", \"screenshots\",",
+        "local-first / local-only"
+      ],
+      "status": "supported",
+      "reason": "no obvious secret, telemetry, or external API dependency found",
+      "evidence": [
+        "repo text scan"
+      ]
+    },
+    {
+      "id": "no-backend",
+      "label": "No backend or server dependency",
+      "sources": [
+        "\"local-only\", \"no backend\", \"CLI\", \"tests\", \"sample report\", \"screenshots\",",
+        "no backend"
+      ],
+      "status": "supported",
+      "reason": "no common backend dependency or server/API directory found",
+      "evidence": [
+        "package.json",
+        "repo tree"
+      ]
+    },
+    {
+      "id": "no-telemetry",
+      "label": "No telemetry or tracking",
+      "sources": [
+        "no telemetry"
+      ],
+      "status": "supported",
+      "reason": "no common telemetry keywords found",
+      "evidence": [
+        "repo text scan"
+      ]
+    },
+    {
+      "id": "no-api-key",
+      "label": "No API key or paid API dependency",
+      "sources": [
+        "no API key"
+      ],
+      "status": "supported",
+      "reason": "no API-key-like references found",
+      "evidence": [
+        "repo text scan"
+      ]
+    },
+    {
+      "id": "cli",
+      "label": "CLI or command-line workflow",
+      "sources": [
+        "\"local-only\", \"no backend\", \"CLI\", \"tests\", \"sample report\", \"screenshots\",",
+        "CLI workflow",
+        "node src/cli.js audit . --out ./claimproof-report",
+        "node src/cli.js audit /path/to/repo --out /tmp/claimproof-report"
+      ],
+      "status": "supported",
+      "reason": "package bin or CLI file exists",
+      "evidence": [
+        "package.json#bin",
+        "src/cli.js"
+      ]
+    },
+    {
+      "id": "tests",
+      "label": "Tests or verification commands",
+      "sources": [
+        "\"local-only\", \"no backend\", \"CLI\", \"tests\", \"sample report\", \"screenshots\",",
+        "tests, verification, lint, typecheck, or build scripts",
+        "npm test",
+        "npm run verify"
+      ],
+      "status": "supported",
+      "reason": "test or verification scripts/files exist",
+      "evidence": [
+        "script:test",
+        "script:verify",
+        "test/engine.test.js"
+      ]
+    },
+    {
+      "id": "ci",
+      "label": "Continuous integration",
+      "sources": [
+        "GitHub Actions CI"
+      ],
+      "status": "supported",
+      "reason": "GitHub Actions workflow exists",
+      "evidence": [
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "id": "report-artifacts",
+      "label": "Reports, packets, bundles, or export artifacts",
+      "sources": [
+        "\"local-only\", \"no backend\", \"CLI\", \"tests\", \"sample report\", \"screenshots\",",
+        "report, packet, bundle, export, JSON, Markdown, or HTML artifacts",
+        "node src/cli.js audit . --out ./claimproof-report",
+        "open claimproof-report/report.html",
+        "node src/cli.js audit /path/to/repo --out /tmp/claimproof-report"
+      ],
+      "status": "supported",
+      "reason": "report/export evidence exists",
+      "evidence": [
+        "script:demo",
+        "script:verify"
+      ]
+    },
+    {
+      "id": "license",
+      "label": "License claim",
+      "sources": [
+        "or \"MIT licensed\" and you want to know whether the repository actually backs",
+        "license files",
+        "License",
+        "MIT"
+      ],
+      "status": "supported",
+      "reason": "license file exists",
+      "evidence": [
+        "LICENSE"
+      ]
+    }
+  ]
+}
